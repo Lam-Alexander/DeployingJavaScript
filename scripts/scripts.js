@@ -11,6 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
+let modelName = "XYZ";
+let duration = 0;
 
 
 
@@ -25,9 +27,19 @@ You are encouraged to use the provided naming convention for ease of review.
 */
 
 // INSERT YOUR CODE HERE
+function recalculate(){
+    let costLabel = document.getElementById("calculated-cost");
+    let total_cost = 0;
 
+    if (modelName == "XYZ"){
+         total_cost = duration * 100;
+    }
 
-
+    else if (modelName == "CPRG"){
+        total_cost = duration * 213;
+    }
+    costLabel.innerHTML = total_cost;
+}
 
 
 
@@ -41,13 +53,28 @@ You are encouraged to use the provided naming convention for ease of review.
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    // modelButton.addEventListener("click", changeModel);
+    
 
 // INSERT YOUR CODE HERE
+let modelButton = document.getElementById("model-button");
 
+modelButton.addEventListener("click", changeModel);
 
+function changeModel(){
+    let modelButton = document.getElementById("model-text")
 
+    if (modelName == "XYZ"){
+        modelName = "CPRG";
+        modelButton.innerHTML="Model CPRG";
+    }
+    
+    else if (modelName == "CPRG"){
+             modelName = "XYZ";
+             modelButton.innerHTML="Model XYZ";
+    }
 
+    recalculate()
+}
 
 
 
