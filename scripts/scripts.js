@@ -94,7 +94,6 @@ function changeModel(){
 let durationButton = document.getElementById("duration-button");
 durationButton.addEventListener("click",changeDuration);
 let userInput = 0;
-
 function changeDuration(){
    userInput = window.prompt("Enter the amount of days to book");
     let durationText = document.getElementById("duration-text");
