@@ -61,7 +61,7 @@ let modelButton = document.getElementById("model-button");
 modelButton.addEventListener("click", changeModel);
 
 function changeModel(){
-    let modelButton = document.getElementById("model-text")
+    let modelButton = document.getElementById("model-text");
 
     if (modelName == "XYZ"){
         modelName = "CPRG";
@@ -73,7 +73,7 @@ function changeModel(){
              modelButton.innerHTML="Model XYZ";
     }
 
-    recalculate()
+    recalculate();
 }
 
 
@@ -93,12 +93,12 @@ function changeModel(){
 
 let durationButton = document.getElementById("duration-button");
 durationButton.addEventListener("click",changeDuration);
-
+let userInput = 0;
 function changeDuration(){
-   userInput = window.prompt("Enter the amount of days to book")
+   userInput = window.prompt("Enter the amount of days to book");
     let durationText = document.getElementById("duration-text");
-    duration = userInput
-    durationText.innerHTML =userInput
+    duration = userInput;
+    durationText.innerHTML =userInput;
     
-    recalculate()
+    recalculate();
 }
